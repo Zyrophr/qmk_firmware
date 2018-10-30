@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ISSI3733_LED_COUNT 119
 
 //Default Global Current Register value (Default brightness 0 - 255)
-#define ISSI3733_GCR_DEFAULT 128
+#define ISSI3733_GCR_DEFAULT 165
 
 #define LED_GCR_MAX                 165         //Max GCR value (0 - 255) WARNING: Raising this value may overload the LED drivers and USB bus
 #define LED_GCR_STEP                10          //GCR increment/decrement value
@@ -43,7 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define ANIMATION_SPEED_STEP        1
 
-#define BREATHE_MIN_STEP            0
+#define BREATHE_MIN_STEP            50
 #define BREATHE_MAX_STEP            255
 
 //LED Mapping - More practically generated from a spreadsheet program
