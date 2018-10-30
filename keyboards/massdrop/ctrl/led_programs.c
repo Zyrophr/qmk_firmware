@@ -103,18 +103,66 @@ led_setup_t leds_rainbow_s[] = {
 //The last entry must be { .end = 1 }
 //Add the new animation name to the list below following its format
 
+led_setup_t leds_red_blue[] = {
+    { .hs = 0,  .he = 33,  .rs = 249,  .re = 249,  .gs = 19, .ge = 19, .bs = 65, .be = 65, .ef = EF_NONE },
+    { .hs = 33, .he = 66,  .rs = 249,  .re = 141, .gs = 19, .ge = 73, .bs = 65, .be = 252, .ef = EF_NONE },
+    { .hs = 66, .he = 100, .rs = 141, .re = 0, .gs = 73, .ge = 17, .bs = 252, .be = 255, .ef = EF_NONE },
+    { .end = 1 },
+};
+
+led_setup_t leds_greenblue[] = {
+    { .hs = 0, .he = 100, .rs = 0, .re = 0, .gs = 255, .ge = 255, .bs = 148, .be = 148, .ef = EF_NONE },
+    { .end = 1 },
+};
+
+led_setup_t leds_orange[] = {
+    { .hs = 0, .he = 100, .rs = 255, .re = 255, .gs = 148, .ge = 148, .bs = 0, .be = 0, .ef = EF_NONE },
+    { .end = 1 },
+};
+
+led_setup_t leds_blurple[] = {
+    { .hs = 0, .he = 100, .rs = 110, .re = 110, .gs = 43, .ge = 43, .bs = 255, .be = 255, .ef = EF_NONE },
+    { .end = 1 },
+};
+
+led_setup_t leds_pink[] = {
+    { .hs = 0, .he = 100, .rs = 255, .re = 255, .gs = 40, .ge = 40, .bs = 72, .be = 72, .ef = EF_NONE },
+    { .end = 1 },
+};
+
+led_setup_t leds_lightgreen[] = {
+    { .hs = 0, .he = 100, .rs = 140, .re = 140, .gs = 255, .ge = 255, .bs = 40, .be = 40, .ef = EF_NONE },
+    { .end = 1 },
+};
+
+led_setup_t leds_vapor[] = {
+    {.hs = 0, .he = 100, .rs = 0, .re = 0, .gs = 237, .ge = 237, .bs = 255, .be = 255, .ef = EF_NONE},
+    {.hs = 0, .he = 15, .rs = 0, .re = 255, .gs = 0, .ge = 0, .bs = 0, .be = 0, .ef = EF_SCR_R},
+    {.hs = 15, .he = 30, .rs = 255, .re = 0, .gs = 0, .ge = 0, .bs = 0, .be = 0, .ef = EF_SCR_R},
+    {.hs = 0, .he = 15, .rs = 0, .re = 0, .gs = 0, .ge = 237, .bs = 0, .be = 111, .ef = EF_SCR_R | EF_SUBTRACT},
+    {.hs = 15, .he = 30, .rs = 0, .re = 0, .gs = 237, .ge = 0, .bs = 111, .be = 0, .ef = EF_SCR_R | EF_SUBTRACT},
+    {.end = 1},
+};
+
 void *led_setups[] = {
+    leds_off,
     leds_rainbow_s,
     leds_rainbow_ns,
     leds_teal_salmon,
+    leds_red_blue,
     leds_yellow,
     leds_red,
     leds_green,
+    leds_lightgreen,
     leds_blue,
+    leds_greenblue,
+    leds_orange,
+    leds_blurple,
+    leds_pink,
     leds_white,
+    leds_vapor,
     leds_white_with_red_stripe,
-    leds_black_with_red_stripe,
-    leds_off
+    leds_black_with_red_stripe
 };
 
 const uint8_t led_setups_count = sizeof(led_setups) / sizeof(led_setups[0]);
