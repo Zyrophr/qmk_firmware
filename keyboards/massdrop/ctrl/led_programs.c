@@ -110,6 +110,13 @@ led_setup_t leds_red_blue[] = {
     { .end = 1 },
 };
 
+led_setup_t leds_gold_blue[] = {
+    { .hs = 0,  .he = 33,  .rs = 255,  .re = 255,  .gs = 228, .ge = 228, .bs = 30, .be = 30, .ef = EF_NONE },
+    { .hs = 33, .he = 66,  .rs = 255,  .re = 137, .gs = 228, .ge = 255, .bs = 30, .be = 178, .ef = EF_NONE },
+    { .hs = 66, .he = 100, .rs = 137, .re = 0, .gs = 255, .ge = 255, .bs = 178, .be = 89, .ef = EF_NONE },
+    { .end = 1 },
+};
+
 led_setup_t leds_greenblue[] = {
     { .hs = 0, .he = 100, .rs = 0, .re = 0, .gs = 255, .ge = 255, .bs = 148, .be = 148, .ef = EF_NONE },
     { .end = 1 },
@@ -150,6 +157,7 @@ void *led_setups[] = {
     leds_rainbow_ns,
     leds_teal_salmon,
     leds_red_blue,
+    leds_gold_blue,
     leds_yellow,
     leds_red,
     leds_green,
